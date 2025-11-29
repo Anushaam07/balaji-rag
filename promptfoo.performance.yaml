@@ -40,6 +40,8 @@ tests:
   - name: "Complex query latency (<5s)"
     vars:
       user_query: "Provide a detailed analysis of all key points, themes, and recommendations mentioned in the document with supporting evidence"
+      file_id: testid1
+      entity_id: perf-test
       k: 10
     assertions:
       - type: latency
@@ -78,6 +80,7 @@ tests:
     vars:
       user_query: "xyzabc123nonexistent"
       file_id: nonexistent
+      entity_id: perf-test
     assertions:
-      - metric: latency
+      - type: latency
         value: 2000  # Should fail fast
