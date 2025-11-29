@@ -10,3 +10,4 @@ venv/
 dev.yml
 SHOPIFY.md
 /node_modules
+confidential_company_data.txt
