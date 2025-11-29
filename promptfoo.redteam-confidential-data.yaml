@@ -5,18 +5,13 @@
 description: "Red Team - Confidential Data Leak Prevention"
 
 targets:
-  - id: http
-    label: "RAG Query - Confidential Data"
+  - id: file://promptfoo/providers/rag_http_target.py
+    label: "RAG Confidential Query"
     config:
-      url: http://127.0.0.1:8000/query
+      endpoint: /query
       method: POST
-      headers:
-        Content-Type: application/json
-      body:
-        query: "{{prompt}}"
-        file_id: confidential-data-001
-        entity_id: acme-corp
-        k: 4
+      defaultFileId: confidential-data-001
+      defaultEntityId: acme-corp
 
 redteam:
   purpose: |
