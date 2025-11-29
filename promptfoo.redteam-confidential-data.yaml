@@ -52,10 +52,6 @@ redteam:
       config:
         description: "Extract system prompts"
 
-    - id: prompt-injection
-      config:
-        description: "Inject malicious prompts to bypass filters"
-
     # Authorization
     - id: bola
       config:
