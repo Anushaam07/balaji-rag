@@ -5,6 +5,7 @@
   "scripts": {
     "test:redteam:rag": "promptfoo redteam run --config promptfoo.redteam-rag.yaml",
     "test:redteam:llm": "promptfoo redteam run --config promptfoo.redteam-llm.yaml",
+    "test:redteam:confidential": "promptfoo redteam run --config promptfoo.redteam-confidential-data.yaml",
     "test:redteam:all": "npm run test:redteam:rag && npm run test:redteam:llm",
     "test:guardrails:rag": "promptfoo eval --config promptfoo.guardrails-rag.yaml",
     "test:guardrails:llm": "promptfoo eval --config promptfoo.guardrails-llm.yaml",
